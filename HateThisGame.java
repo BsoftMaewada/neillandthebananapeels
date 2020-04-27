@@ -4,17 +4,17 @@ import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
 import javax.swing.*;
-
+//implementing public class
 public class HateThisGame extends JPanel {
-
+//declaring instance variables
     int x, y;
     
-    private Graphics dbg;
+    private Graphics dbg; //private variable type call graphic 
 
-    Image bg;
+    Image bg; // create variable call bg from the standard libraries image
 
-    public class AL extends KeyAdapter {
-        public void keyPressed(KeyEvent e) {
+    public class AL extends KeyAdapter { //AL inherits from  KeyAdapter
+        public void keyPressed(KeyEvent e) {//Implementing keyPressed method  which take keyEvent as an argument by calling it e.
             int keyCode = e.getKeyCode();
 
             if (keyCode == e.VK_LEFT) {
@@ -43,13 +43,12 @@ public class HateThisGame extends JPanel {
             }
         }
 
-        public void keyReleased(KeyEvent e) {
+        public void keyReleased(KeyEvent e) {//implementing keyReleased
         }
     }
 
     public HateThisGame() throws Exception {
-        // Load images
-        //ImageIcon i = new ImageIcon(
+        // Load background images
         
         bg = Toolkit.getDefaultToolkit().createImage("/Users/B-Soft/Documents/Classes/JavaClass2020/Project/HateThisGame/IHateThisGame.png");
 
@@ -72,7 +71,7 @@ public class HateThisGame extends JPanel {
     public void paintComponent(Graphics g) {
         g.drawImage(bg, 0, 0, null);
     }
-
+//Setting up the game window 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
